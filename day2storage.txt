@@ -1,0 +1,26 @@
+   27  chmod 777 /var/run/docker.sock 
+   28  cd /var/lib/docker/
+   44  cd /var/lib/docker/
+   48  cd /var/lib/docker/
+   53  cd /var/lib/docker
+   61  cd /var/lib/docker
+   97  vi Dockerfile
+  101  chmod 777  /var/run/docker.sock 
+  102  docker  ps  
+  103  docker  rm  $(docker  ps  -aq)
+  104  docker network   rm  $(docker  networl  ls  -q)
+  105  docker network   rm  $(docker  networl ls  -q)
+  106  docker networl  ls
+  107  docker network  ls
+  108  docker network  ls -q
+  109  docker  network  rm  $(docker network  ls -q)
+  111  cd  /var/lib/docker/
+  119  docker  run  --name okkkk alpine  sh 
+  120  docker  volume  ls
+  121  docker  run  -itd  --name  webapp1  -v   ashuvol:/mydata  alpine sh 
+  122  docker  exec  -it  webapp1 sh 
+  123  docker  run  -itd  --name  webapp2  -v   ashuvol:/fromwebapp:ro   alpine sh 
+  124  docker  exec  -it webapp2  sh 
+  125  docker  run  -itd  --name  webapp3  -v   ashuvol:/fromwebapp:ro  -v  nikvol:/writedata  alpine sh 
+  126  docker  exec  -it  webapp3  sh 
+  132  history    |   grep -i docker   >day2storage.txt

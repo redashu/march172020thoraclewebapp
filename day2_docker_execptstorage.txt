@@ -1,0 +1,293 @@
+   18  docker  
+   19  sudo  yum   install  docker  
+   20  docker  -v
+   21  sudo  systemctl  start  docker
+   22  sudo  systemctl  status  docker
+   23  sudo  systemctl  enable  docker
+   26  docker   search    mysql
+   27  docker   search    python
+   29  docker   search    oraclelinux
+   30  docker   search    ashutoshh
+   31  docker   search    hadoop
+   32  docker   images
+   33  docker   pull  mysql
+   34  docker   images
+   35  docker   pull  python
+   36  docker   images
+   37  docker  pull oraclelinux
+   38  docker   images
+   39  docker  pull alpine
+   40  docker   images
+   41  docker  pull  java
+   42  docker   images
+   43  docker  info 
+   44  docker  info   |less
+   46  docker  images
+   47  cd  /var/lib/docker/
+   50  docker  -v
+   51  docker  images
+   52  docker  run  alpine  cal 
+   56  docker  run  alpine    cal  
+   58  docker   ps
+   59  docker   ps  -a
+   61  docker   ps  -a
+   62  docker  run  alpine    cal  
+   63  docker   ps  -a
+   64  docker  run  alpine  ping  fb.com 
+   66  docker  ps
+   67  docker  run  --name  ashuc1   alpine  ping  google.com 
+   68  docker  ps
+   69  docker  ps -a
+   71  docker  ps -a
+   72  docker  rm   ashuc1
+   73  docker  ps -a
+   74  docker  rm   amar   hanu 
+   75  docker  ps -a
+   77   docker  run  --name  ashuc1   alpine  ping  google.com
+   78   docker  run  -d   --name  ashuc2  alpine  ping  8.8.8.8
+   79  docker  ps
+   80  docker  logs  ashuc2
+   82  docker  ps
+   83  docker  ps  -a
+   85  docker  ps  -a
+   86  docker   stop    ashuc2
+   87  docker  ps 
+   88  docker  ps  -a
+   89  docker  ps
+   90  docker  kill  0390b4c65661
+   91  docker  kill  ff373bdaf1b3
+   92  docker  ps  
+   93  docker  ps  -a
+   94  docker  ps  -aq
+   95  docker  ps  -a
+   96  docker  rm    $(docker  ps  -aq)
+   97  docker  ps -a
+   98  docker  run  -d  --name  ashuc1  alping  ping  fb.com 
+   99  docker  run  -d  --name  ashuc1  alpine  ping  fb.com 
+  100  docker   ps
+  101  docker   exec   ashuc1   cal 
+  102  docker   exec   ashuc1   ping  google.com 
+  103  docker   ps
+  105  docker   exec  -d   ashuc1   ping  google.com 
+  106  docker   version
+  107  docker  search   java
+  108  docker  info
+  110  docker   images 
+  111  sudo  ls  /var/lib/docker/
+  113  docker  ps
+  114  docker  ps -a
+  116  docker  run  -d  --name  ashuc3  alpine  ping  fb.com 
+  117  docker  ps
+  118  docker  exec  ashuc3  date
+  119  docker  exec  ashuc3  cal
+  120  docker kill ashuc3
+  121  docker rm  ashuc3
+  123  docker  rm  $(docker  ps  -aq)
+  124  docker  kill  $(docker  ps  -aq)
+  125  docker  rm  $(docker  ps  -aq)
+  126  docker  images
+  127  docker  run --name  ashuc11  fedora  bash 
+  128  docker  run  -i -t   --name  ashuc11  fedora  bash 
+  129  docker  run  -i -t   --name  ashuc12  fedora  bash 
+  131  docker  run  -it   --name  ashuc13  fedora  bash 
+  132  docker  ps
+  134  docker  ps
+  135  docker  exec  -it  madhufedora2  bash 
+  136  docker  ps
+  137  docker  ps  -a
+  138  docker  start  ashuc13
+  139  docker  ps
+  141  docker   ps
+  142  docker  exec  -it  ashuc3  date
+  143  docker  exec  -it  ashuc13  date
+  144  docker  exec  -it  ashuc13  bash
+  145  docker  ps
+  148  docker   ps
+  149  docker  commit  -m   "my custom changes"  ashuc13    ashutoshhimg1
+  150  docker   images
+  151  docker  run   -it    alpine   
+  152  docker  ps
+  154  docker  images
+  155  docker   inspect   alpine  
+  156  docker   inspect   alpine    |   less
+  157  docker   inspect   python   |   less
+  159  docker   inspect   alpine    
+  160  docker   inspect   python
+  162  docker  images
+  163  docker  search   tomcat
+  164  docker  search   httpd
+  165  docker  search   weblogic
+  179  vim    Dockerfile
+  183  vim  Dockerfile
+  184  vi  Dockerfile
+  185  vim Dockerfile 
+  187  vim Dockerfile 
+  189  cat  Dockerfile 
+  191  docker  build   -t    ashuwebapp16thmarch:v1     .
+  193  docker  images
+  195  docker  images
+  196  docker  run   --name  ashuwebc1  -it ashuwebapp16thmarch:v1   bash 
+  197  docker  run  -d  --name  ashuwebc2  -p   1111:80  ashuwebapp16thmarch:v1  
+  198  docker   ps
+  200  docker   ps
+  202  docker   ps
+  204  cat  Dockerfile 
+  205  docker  ps
+  206  docker  images
+  207  docker  run  -d  --name ras22  -p  7878:80  rasmitawebapp116mar:v1  
+  208  docker  ps
+  211  cat  Dockerfile 
+  217  docker  version
+  218  sudo chmod  777  /var/run/docker.sock 
+  219  docker  version
+  221  docker  ps
+  222  docker  ps -a
+  223  docker  rm  $(docker  ps  -aq)
+  224  docker  run  -d  --name  ok1  alping  ping  fb.com  
+  225  docker  run  -d  --name  ok1  alpine  ping  fb.com  
+  226  docker  run   --name  ok3  alpine  ping  fb.com  
+  227  docker   ps
+  228  docker   ps -a
+  229  docker   ps
+  230  docker  ps
+  231  docker  ps  -a
+  232  docker  ps  -f  "status=exited"
+  233  docker  ps
+  234  docker  start   ok3
+  235  docker  ps
+  237  docker  ps
+  238  docker  exec  -d ok1  ping  google.com 
+  239  docker  logs  ok1
+  241  docker  ps
+  243  docker  exec  -it  ok1   sh 
+  266  vim  Dockerfile
+  269  vim Dockerfile 
+  271  vim Dockerfile 
+  275  cat  Dockerfile 
+  277  vim   .dockerignore
+  278  cat  .dockerignore 
+  280  vim   .dockerignore 
+  281  cat  .dockerignore 
+  283  docker  build  -t   oraclewebappashu2020317:v1  .
+  284  cat  Dockerfile 
+  286  docker   images
+  296  docker  run  -d  --name  ashuweb11  -p  5566:80  oraclewebappashu2020317:v1  
+  297  docker  ps
+  300  vim  Dockerfile 
+  302  docker  build  -t  ashutest1:v1  https://github.com/redashu/march172020thoraclewebapp.git
+  304  docker  tag   oraclewebappashu2020317:v1   dockerashu/oraclewebappashu2020317:v1  
+  305  docker  login  
+  306  docker  push   dockerashu/oraclewebappashu2020317:v1  
+  308  docker logout
+  319  vim Dockerfile
+  321  docker build  -t  aa:pyv1  .
+  322  docker run  -ti  aa.pyv1  
+  323  docker run  -ti  aa:pyv1  
+  325  cat  Dockerfile 
+  326  docker  run  -it  fedora  bash 
+  338  vim   ashu.dockerfile
+  344  docker  run -it  alpine  
+  346  vim  dockerifle
+  347  vim dockerfile
+  348  docker  build  -t   apline:v1  . 
+  349  docker run -it  alpine:v1  
+  350  docker run -it  apline:v1  
+  351  vim dockerfile 
+  352  docker  build  -t   alpine:v2  .
+  353  docker  run -it   alpine:v2  
+  354  vim dockerfile 
+  355  docker  build  -t   alpine:v2  .
+  356  docker  run -it   alpine:v2  
+  357  docker  run -it   alpine:v2    fb.com  
+  358  cat  dockerfile 
+  364  cat  ashu.dockerfile 
+  367  cat  ashu.dockerfile 
+  370  cat  ashu.dockerfile 
+  372  docker  build  -t   ashupy:v1  .
+  373  docker  build -f ashu.dockerfile  -t   ashupy:v1  .
+  375  docker  run  -it  ashupy:v1  
+  376  docker  run  -it  ashupy:v1    bash 
+  377  cat  ashu.dockerfile 
+  378  docker  run  -it   --entrypoint  bash    ashupy:v1   
+  380  cat  ashu.dockerfile 
+  389  vim  Dockerfile
+  390  cat  Dockerfile 
+  391  docker  build  --build-args x=screen  -t   ashuaa:v1  .
+  392  docker  build  --build-arg x=screen  -t   ashuaa:v1  .
+  394  cat  Dockerfile 
+  395  vim Dockerfile 
+  396  cat  Dockerfile 
+  397  vim  Dockerfile 
+  398  docker build  -t  ashuok:v1  .
+  399  docker run -it  ashuok:v1   env
+  400  docker run -it -e  db_user=oracle  ashuok:v1   env
+  402  vim Dockerfile 
+  403  cat  Dockerfile 
+  405  docker run -it   ashuok:v1   env
+  406  docker run -it  -e  db_user=hello  ashuok:v1   env
+  408  docker run -it  -e  db_user=hello  ashuok:v1   env
+  410  docker  ps
+  411  docker  kill   $(docker ps  -aq)
+  412  docker  rm   $(docker ps  -aq)
+  413  docker  pos
+  414  docker  ps
+  415  docker  ps -a
+  417  ifconfig    docker0
+  418  docker  ps -a
+  419  ifconfig    docker0
+  421  ifconfig   docker0
+  422  docker  ps  -a
+  423  docker  run  -d  --name  ashuc11  alping   ping fb.com 
+  424  docker  run  -d  --name  ashuc11  alpine   ping fb.com 
+  425  docker   ps
+  426  docker   exec  -it  ashuc11   ifconfig 
+  427  docker   ps
+  428  docker   exec  -it  ashuc11   sh 
+  429  docker  ps
+  431  docker   inspect   ashuc11
+  432  ifconfig  docker0
+  433  docker  network   ls
+  434  docker  inspect  bridge
+  435  docker  network   ls
+  438  docker  network   ls
+  439  docker  network  create   ashubr  --subnet  172.18.0.0/16
+  440  docker  network   ls
+  442  docker  network   ls
+  443  docker  inspect  apex
+  444  docker  network   ls
+  445  docker  inspect  nikbr
+  447  docker  network   ls
+  448  docker  run  -d  --name  ashuc2  --net  ashubr  alpine  ping  fb.com  
+  449  docker  inspect  ashubr
+  451  docker  ps
+  452  docker  run  -d  --name  ashuc2  --net  ashubr  alpine  ping  fb.com  
+  453  docker  run  -d  --name  ashuc3  --net  ashubr  alpine  ping  fb.com  
+  454  docker  ps
+  455  docker  run  -d  --name  ashuc3  --net  ashubr  alpine  sleep  1000
+  456  docker  run  -d  --name  ashuc6  --net  ashubr  alpine  sleep  1000
+  457  docker  ps
+  458  docker  network   ls
+  460  docker  run  -itd  -p   7878:80   nginx  
+  468  docker   network   ls
+  469  docker  run   -it  --net  none    alpine  sh 
+  472  docker  images
+  473  docker  network   ls
+  474  docker  network  create   ashubr
+  475  docker  network   ls
+  476  docker  run  -d  --name  myc11  --net  ashubr  -p  2121:80  oraclewebappashu2020317:v1  
+  477  docker  ps
+  478  docker  inspect   myc11
+  480  docker  ps
+  484  docker  ps
+  485  docker   run  -it  --name  ashuc6   alpine  sh 
+  486  docker  rm   ashuc6
+  487  docker   run  -it  --name  ashuc6   alpine  sh 
+  488  docker  volume   create   ashuvol 
+  489  docker  volume   ls
+  490  docker  run  -it  --name  ashuc7   -v    ashuvol:/ashusecdata   alpine   sh 
+  491  docker  rm  ashuc7   
+  492  docker  volume  ls
+  493  docker  run  -it  --name  ashuc7   -v    ashuvol:/ashusecdata   alpine   sh 
+  494  docker  run  -it  --name  ashuc8   -v    ashuvol:/okdata  fedora   bash 
+  502  history    |   grep -i docker 
+  503  history    |   grep -i docker   >day2_docker_execptstorage.txt
