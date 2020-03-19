@@ -1,0 +1,104 @@
+  836  kubectl 
+  837  sudo  yum install  kubectl  
+  838  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  840  sudo  mv  kubectl  /usr/bin/
+  841  sudo chmod   +x   /usr/bin/kubectl 
+  842  kubectl  -v
+  843  kubectl version
+  844  kubectl  version 
+  845  kubectl  version   --client
+  846  kubectl  version   --server
+  847  kubectl  version 
+  851  kubectl  version   
+  852  kubectl  version     --kubecnfig  admin.conf  
+  853  kubectl  version     --kubeconfig  admin.conf  
+  856  kubectl   version   --kubeconfig  admin.conf 
+  857  kubectl   get   nodes   
+  858  kubectl   get   nodes   --kubeconfig  admin.conf 
+  861  kubectl   get   nodes   --kubeconfig  ashu.conf 
+  863  kubectl   get   nodes   --kubeconfig  ashu.conf 
+  866  kubectl   get   nodes
+  868  cp  -v  ashu.conf   $HOME/.kube/config  
+  870  kubectl   get   nodes  
+  875  kubectl  get  nodes
+  892  kubectl   create   -f   ashupod1.yml  
+  893  kubectl get   pods  
+  894  kubectl   get  nodes
+  895  kubectl get   pods  -o  wide  
+  896  kubectl get   pods ashupod1   -o  wide  
+  898  kubectl get   pods ashupod1   -o  wide  
+  899  kubectl get  nodes
+  902  kubectl  get pods 
+  903  kubectl  get po 
+  904  kubectl  get po   ashupod1
+  905  kubectl  get po   ashupod1  -o wide
+  906  kubectl  delete   po   ashupod1  
+  907  kubectl get po 
+  910  kubectl   explain  pods
+  911  kubectl   explain  pods.spec 
+  912  kubectl   explain  pods.spec |    grep conta
+  914  kubectl get  po
+  915  kubectl delete pods  --all
+  916  kubectl get pods
+  919  kubectl   run   ashupod2  --image=dockerashu/oraclewebappashu2020317:v1  --restart=Never  --dry-run 
+  920  kubectl get  po
+  921  kubectl   run   ashupod2  --image=dockerashu/oraclewebappashu2020317:v1  --restart=Never  --dry-run   -o  yaml 
+  922  kubectl   run   ashupod2  --image=dockerashu/oraclewebappashu2020317:v1  --restart=Never  --dry-run   -o  yaml                    >ashupod2.yml 
+  923  kubectl get  po
+  926  kubectl   run   ashupod2  --image=dockerashu/oraclewebappashu2020317:v1  --restart=Never  --dry-run   -o  yaml  >ashupod2.yml 
+  931  kubectl   run   ashupod2  --image=dockerashu/oraclewebappashu2020317:v1  --restart=Never  --dry-run   -o  yaml  >ashupod2.yml 
+  933  kubectl create  -f  ashupod2.yml 
+  938  kubectl get  po 
+  941  kubectl get  po
+  943  kubectl  get po 
+  947  kubectl  get pods 
+  948  kubectl  get pods   ashupod2
+  949  kubectl  get pods   ashupod2 -o wide
+  950  kubectl  get pods   ashupod2 
+  951  kubectl  get pods   ashupod2  --show-labels
+  952  kubectl  get pods    --show-labels
+  957  kubectl  get  pods  --show-labels 
+  961  kubectl  get  pods  --show-labels 
+  962  kubectl  get  pods  ashupod2  
+  963  kubectl  get  pods  ashupod2  --show-labels 
+  969  kubectl   create  service  nodeport   ashusvc1  --tcp  80  --dry-run  -o yaml  >ashusvc1.yml 
+  971  kubectl get  po  ashupod2  --show-labels 
+  974  kubectl create -f  ashusvc1.yml 
+  977  kubectl  get   services  
+  980  kubectl get  p 
+  981  kubectl get  po 
+  982  kubectl get  services 
+  983  kubectl get  svc
+  984  kubectl get  svc  ashusvc1   
+  986  kubectl get svc 
+  987  kubectl get pods ashupod2  
+  988  kubectl get pods ashupod2  -o wide
+  989  kubectl  get  svc
+  990  kubectl  get pods
+  991  kubectl get svc
+  992  kubectl  delete all  --all
+  993  kubectl  get pods
+  994  kubectl  get  svc  
+  995  kubectl  get pods
+ 1008  kubectl  get po 
+ 1009  kubectl  get  svc
+ 1010  kubectl create -f  ashupod2.yml 
+ 1011  kubectl  get po,svc 
+ 1015  kubectl get po
+ 1016  kubectl  describe  pods  ashupod2 
+ 1017  kubectl  describe  pods  ashupod2   | less
+ 1019  kubectl  delete  all --all
+ 1029  kubectl  create   deployment   ashudep1  --image=nginx  --dry-run  -o yaml  >ashudep1.yml 
+ 1035  kubectl  create   service  nodeport   ashusvc2  --port  80  --dry-run  >>ashudep1.yml  
+ 1036  kubectl  create   service  nodeport   ashusvc2  --tcp   80  --dry-run  >>ashudep1.yml  
+ 1037  kubectl  create   service  nodeport   ashusvc2  --tcp   80  --dry-run -o yaml   >>ashudep1.yml  
+ 1041  kubectl create  -f  ashudep1.yml 
+ 1042  kubectl   get  deploy 
+ 1043  kubectl   get  svc 
+ 1044  kubectl   get  deploy 
+ 1045  kubectl   get  deploy  -w
+ 1046  kubectl   get  deploy  
+ 1047  kubectl  get deploy 
+ 1048  kubectl  get  svc
+ 1056  history     |    grep -i kube
+ 1057  history     |    grep -i kube  >day4_kubernetes.txt
